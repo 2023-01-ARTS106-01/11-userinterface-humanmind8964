@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class UIManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Animator startButton;
+    public Animator settingsButton;
 
     public void StartGame() 
-{
+    {
     SceneManager.LoadScene("RocketMouse");
-}
-
-    void Start()
-    {
-        
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void OpenSettings() 
     {
-        
+    startButton.SetBool("isHidden", true);
+    settingsButton.SetBool("isHidden", true);
     }
 }
